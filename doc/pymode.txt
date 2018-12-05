@@ -69,7 +69,7 @@ Features:                                                       *pymode-features
 - Search in python documentation (``K``)
 - Code refactoring <rope refactoring library> (rope_)
 - Strong code completion (rope_)
-- Go to definition (``<C-c>g`` for `:RopeGotoDefinition`)
+- Go to definition (``<leader>rg`` for `:RopeGotoDefinition`)
 - And more, more ...
 
 
@@ -455,7 +455,7 @@ Show documentation for element under cursor ~
 Show documentation for object under cursor.       *'g:pymode_rope_show_doc_bind'*
 Leave empty to disable the key binding.
 >
-    let g:pymode_rope_show_doc_bind = '<C-c>d'
+    let g:pymode_rope_show_doc_bind = '<leader>rd'
 
 Regenerate project cache on every save (if file has been modified)
 >
@@ -507,7 +507,7 @@ By default when you press *<C-C>g* on any object in your code you will be moved
 to definition.
 Leave empty for disable key binding.       *'g:pymode_rope_goto_definition_bind'*
 >
-    let g:pymode_rope_goto_definition_bind = '<C-c>g'
+    let g:pymode_rope_goto_definition_bind = '<leader>rg'
 
 Command for open window when definition has been found
 Values are (`e`, `new`, `vnew`)                   *'g:pymode_rope_goto_definition_cmd'*
@@ -526,7 +526,7 @@ variables and keyword arguments.
 Keymap for rename method/function/class/variables under cursor
                                                     *'g:pymode_rope_rename_bind'*
 >
-    let g:pymode_rope_rename_bind = '<C-c>rr'
+    let g:pymode_rope_rename_bind = '<leader>rr'
 
 
 Rename a current module/package ~
@@ -535,7 +535,7 @@ Rename a current module/package ~
 
 Keymap for rename current module             *'g:pymode_rope_rename_module_bind'*
 >
-    let g:pymode_rope_rename_module_bind = '<C-c>r1r'
+    let g:pymode_rope_rename_module_bind = '<leader>rrm'
 
 
 Imports ~
@@ -546,12 +546,12 @@ Organize imports sorts imports, too. It does that according to PEP8. Unused
 imports will be dropped.
 Keymap                                    *'g:pymode_rope_organize_imports_bind'*
 >
-    let g:pymode_rope_organize_imports_bind = '<C-c>ro'
+    let g:pymode_rope_organize_imports_bind = '<leader>ro'
 
 Insert import for current word under cursor     *'g:pymode_rope_autoimport_bind'*
 Should be enabled |'g:pymode_rope_autoimport'|
 >
-    let g:pymode_rope_autoimport_bind = '<C-c>ra'
+    let g:pymode_rope_autoimport_bind = '<leader>ra'
 
 
 Convert module to package ~
@@ -561,7 +561,7 @@ Convert module to package ~
 
 Keybinding:
 >
-    let g:pymode_rope_module_to_package_bind = '<C-c>r1p'
+    let g:pymode_rope_module_to_package_bind = '<leader>rmp'
 
 
 Extract method/variable ~
@@ -572,8 +572,8 @@ Extract method/variable from selected lines.
                                             *'g:pymode_rope_extract_method_bind'*
                                           *'g:pymode_rope_extract_variable_bind'*
 >
-    let g:pymode_rope_extract_method_bind = '<C-c>rm'
-    let g:pymode_rope_extract_variable_bind = '<C-c>rl'
+    let g:pymode_rope_extract_method_bind = '<leader>rem'
+    let g:pymode_rope_extract_variable_bind = '<leader>rev'
 
 
 Use function ~
@@ -582,7 +582,7 @@ Use function ~
 It tries to find the places in which a function can be used and changes the
 code to call it instead.
 >
-    let g:pymode_rope_use_function_bind = '<C-c>ru'
+    let g:pymode_rope_use_function_bind = '<leader>ru'
 
 
 Move method/fields ~
@@ -594,11 +594,11 @@ attributes. The old method will call the new method. If you want to change all
 of the occurrences of the old method to use the new method you can inline it
 afterwards.
 >
-    let g:pymode_rope_move_bind = '<C-c>rv'
+    let g:pymode_rope_move_bind = '<leader>rmv'
 
 Change function signature ~
 >
-    let g:pymode_rope_change_signature_bind = '<C-c>rs'
+    let g:pymode_rope_change_signature_bind = '<leader>rs'
 
 
 -------------------------------------------------------------------------------
