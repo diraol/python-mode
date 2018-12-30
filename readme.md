@@ -188,6 +188,22 @@ Please, also provide more contextual information such as:
 * `git status` (under your _python-mode_ directory)
 * `tree <python-mode-directory>` or something similar (such as `ls -lR`)
 
+## Docker environment
+Now you can try python-mode within a docker container, with a python-version
+from your choice and a vim built for that python version.
+
+To build the docker images you should use the script `build_docker_images.sh`
+that is located on the root of this repo.
+
+To run the container for a specific version, after building it, you can do:
+
+`docker run --rm -it python-mode:<PYTHON_VERSION>`
+
+* PYTHON\_VERSION can be 2.7, 3.7, etc.
+
+If you do not want the container to be removed after you exit it, just remove
+the `--rm` from the command above.
+
 # Frequent problems
 
 Read this section before opening an issue on the tracker.
