@@ -30,14 +30,15 @@ RUN set -ex \
 ENV PYTHON_MODE_HOME /root/.vim/pack/foo/start/python-mode/
 ENV VIM_RC /root/.vimrc
 ENV PYMODE_RC /root/.pymoderc
-ENV TEST_FILE /root/test.py
+ENV TEST_PATH /root/tests
 
 COPY . ${PYTHON_MODE_HOME}
 RUN set -ex \
     && cd ${PYTHON_MODE_HOME} \
     && find . -type f -name '*.pyc' -delete \
     && find . -type d -name '__pycache__' -delete \
-    && ln -s ${PYTHON_MODE_HOME}tests/utils/test.py ${TEST_FILE} \
+    && mkdir -p /root/tests \
+    && ln -s ${PYTHON_MODE_HOME}tests/utils/test.py ${TEST_PATH} \
     && ln -s ${PYTHON_MODE_HOME}tests/utils/pymoderc ${PYMODE_RC} \
     && ln -s ${PYTHON_MODE_HOME}tests/utils/vimrc ${VIM_RC} \
     && touch /root/.vimrc.before /root/.vimrc.after
